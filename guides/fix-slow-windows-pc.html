@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixing Slow Windows PCs | Hardy Technology Solutions</title>
+    <meta name="description" content="A clean, step-by-step workflow for diagnosing and speeding up a slow Windows PC without guesswork.">
+
+    <link rel="icon" type="image/png" href="/images/HTS_Icon.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        header img {
+            max-height: 60px;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        h1, h2, h3 {
+            margin-top: 30px;
+        }
+        .toc {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .toc ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .screenshot {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .screenshot p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 6px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+        }
+        a {
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/"><img src="/images/HTS_Logo.png" alt="Hardy Technology Solutions logo"></a>
+</header>
+
+<main>
+    <h1>Fixing Slow Windows PCs</h1>
+    <p><strong>Last updated:</strong> April 2026</p>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#summary">Quick Summary</a></li>
+            <li><a href="#symptoms">Common Symptoms</a></li>
+            <li><a href="#steps">Step-by-Step Fix</a></li>
+            <li><a href="#tools">Tools You May Need</a></li>
+            <li><a href="#when-upgrade">When It’s Time to Upgrade</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+
+    <h2 id="summary">Quick Summary</h2>
+    <p>
+        Most slow Windows PCs can be fixed by reducing startup apps, removing heavy background software,
+        freeing up disk space, and making sure Windows and drivers are up to date. This guide walks you
+        through a clean, repeatable workflow that solves 80–90% of real-world “my computer is slow” cases.
+    </p>
+
+    <h2 id="symptoms">Common Symptoms</h2>
+    <ul>
+        <li>PC takes several minutes to boot or become usable after login.</li>
+        <li>Apps take a long time to open or frequently “Not Responding.”</li>
+        <li>High disk or CPU usage in Task Manager even when idle.</li>
+        <li>Frequent spinning cursor, stuttering, or lag when switching windows.</li>
+    </ul>
+
+    <h2 id="steps">Step-by-Step Fix</h2>
+
+    <h3>1. Check Task Manager for obvious bottlenecks</h3>
+    <p>
+        First, we want to see what’s actually slowing the system down.
+    </p>
+    <ol>
+        <li>Right-click the taskbar and choose <strong>Task Manager</strong> (or press <strong>Ctrl + Shift + Esc</strong>).</li>
+        <li>Click <strong>More details</strong> if you only see a small window.</li>
+        <li>On the <strong>Processes</strong> tab, sort by <strong>CPU</strong>, then by <strong>Memory</strong>, then by <strong>Disk</strong>.</li>
+    </ol>
+    <p>
+        Look for any process that is consistently using a lot of CPU, memory, or disk. Common culprits:
+        third-party antivirus, cloud sync tools, browser tabs, or bundled OEM utilities.
+    </p>
+
+    <div class="screenshot">
+        <img src="/images/guides/task-manager-processes.png" alt="Windows Task Manager showing CPU, memory, and disk usage">
+        <p>Task Manager is your first stop for spotting obvious resource hogs.</p>
+    </div>
+
+    <h3>2. Disable unnecessary startup apps</h3>
+    <p>
+        Too many apps starting with Windows is one of the biggest causes of slow boot and sluggish performance.
+    </p>
+    <ol>
+        <li>In Task Manager, go to the <strong>Startup</strong> tab.</li>
+        <li>Sort by <strong>Status</strong> or <strong>Startup impact</strong>.</li>
+        <li>Right-click and <strong>Disable</strong> anything you don’t need starting automatically
+            (Spotify, Teams, Zoom, game launchers, OEM utilities, etc.).</li>
+    </ol>
+    <p>
+        You can still open these apps manually when you need them — they just won’t slow down every boot.
+    </p>
+
+    <div class="screenshot">
+        <img src="/images/guides/startup-apps.png" alt="Windows Startup apps list with unnecessary apps disabled">
+        <p>Disabling non-essential startup apps often makes the biggest single difference.</p>
+    </div>
+
+    <h3>3. Uninstall heavy or unused software</h3>
+    <p>
+        Old trial software, OEM bloat, and tools you no longer use can drag the system down.
+    </p>
+    <ol>
+        <li>Open <strong>Settings &gt; Apps &gt; Installed apps</strong> (or <strong>Apps &amp; features</strong>).</li>
+        <li>Sort by <strong>Size</strong> or <strong>Install date</strong>.</li>
+        <li>Uninstall anything you don’t recognize, don’t use, or no longer need.</li>
+    </ol>
+    <p>
+        Be cautious with anything from Microsoft, your hardware vendor, or drivers — when in doubt, leave it.
+    </p>
+
+    <h3>4. Free up disk space and check drive health</h3>
+    <p>
+        Windows slows down dramatically when the system drive is nearly full.
+    </p>
+    <ol>
+        <li>Open <strong>Settings &gt; System &gt; Storage</strong>.</li>
+        <li>Use <strong>Storage Sense</strong> or <strong>Temporary files</strong> to remove junk.</li>
+        <li>Aim to keep at least <strong>20% free space</strong> on your C: drive.</li>
+    </ol>
+    <p>
+        If you’re still on a mechanical hard drive (HDD), upgrading to an SSD is one of the biggest performance boosts you can get.
+    </p>
+
+    <div class="screenshot">
+        <img src="/images/guides/storage-sense.png" alt="Windows Storage settings showing Storage Sense and free space">
+        <p>Keeping your system drive from filling up helps Windows stay responsive.</p>
+    </div>
+
+    <h3>5. Update Windows and drivers</h3>
+    <p>
+        Outdated Windows builds or buggy drivers can cause slowdowns, hangs, and weird behavior.
+    </p>
+    <ol>
+        <li>Go to <strong>Settings &gt; Windows Update</strong>.</li>
+        <li>Click <strong>Check for updates</strong> and install any pending updates.</li>
+        <li>Optionally, visit your PC or motherboard manufacturer’s site for the latest chipset, graphics, and network drivers.</li>
+    </ol>
+
+    <div class="screenshot">
+        <img src="/images/guides/windows-update.png" alt="Windows Update settings showing available updates">
+        <p>Regular updates fix bugs and performance issues behind the scenes.</p>
+    </div>
+
+    <h3>6. Scan for malware or unwanted software</h3>
+    <p>
+        Malware, adware, and shady “PC cleaner” tools can hog resources and slow everything down.
+    </p>
+    <ol>
+        <li>Open <strong>Windows Security</strong> and run a <strong>Full scan</strong>.</li>
+        <li>Optionally, run a reputable on-demand scanner (like Malwarebytes) for a second opinion.</li>
+    </ol>
+
+    <h3>7. Check RAM and hardware limits</h3>
+    <p>
+        If the PC is older or has very little RAM, you may be hitting hardware limits.
+    </p>
+    <ul>
+        <li>Open <strong>Settings &gt; System &gt; About</strong> and check <strong>Installed RAM</strong>.</li>
+        <li>For modern Windows 10/11 use, <strong>8 GB</strong> is a practical minimum; <strong>16 GB</strong> is ideal.</li>
+        <li>If you’re still on an HDD, strongly consider upgrading to an SSD.</li>
+    </ul>
+
+    <h2 id="tools">Tools You May Need</h2>
+    <ul>
+        <li>Windows Task Manager (built-in).</li>
+        <li>Windows Storage / Storage Sense (built-in).</li>
+        <li>Windows Security (built-in) plus an optional on-demand malware scanner.</li>
+        <li>External drive or cloud backup if you’re cleaning up large files.</li>
+    </ul>
+
+    <h2 id="when-upgrade">When It’s Time to Upgrade</h2>
+    <p>
+        If you’ve gone through all of these steps and the PC is still painfully slow, it may be time to
+        consider hardware upgrades or replacement:
+    </p>
+    <ul>
+        <li>The system has less than 8 GB of RAM and can’t be upgraded easily.</li>
+        <li>The system drive is still a mechanical HDD.</li>
+        <li>The machine is more than 7–8 years old.</li>
+    </ul>
+    <p>
+        In many cases, a simple SSD upgrade plus a RAM bump can make an older PC feel almost new again.
+    </p>
+
+    <h2 id="faq">FAQ</h2>
+
+    <h3>Why is my PC still slow after disabling startup apps?</h3>
+    <p>
+        If performance is still poor, check Task Manager for constant high disk or CPU usage.
+        You may have a failing drive, malware, or a background app (like cloud sync or antivirus)
+        that needs to be reconfigured or replaced.
+    </p>
+
+    <h3>Is it better to reinstall Windows instead of troubleshooting?</h3>
+    <p>
+        A clean reinstall can help, but it’s more work and risk. In most cases, following this workflow
+        first will fix the problem without wiping your system. If the PC is still slow after all steps,
+        a clean install on a new SSD can be a good “fresh start.”
+    </p>
+
+    <h3>How often should I do this kind of cleanup?</h3>
+    <p>
+        Light maintenance every few months is usually enough: review startup apps, uninstall unused software,
+        and make sure Windows updates are current. Heavy cleanup is only needed when you notice a real slowdown.
+    </p>
+
+    <h2>Closing Thoughts</h2>
+    <p>
+        A slow Windows PC is almost always fixable with a calm, step-by-step approach. Start with startup apps,
+        storage, and obvious resource hogs, then move on to updates and hardware limits. If you follow this
+        workflow, you’ll avoid random “tweaks” and focus on the changes that actually move the needle.
+    </p>
+    <p>
+        When you’re ready, you can explore related guides like:
+        <a href="/guides/home-network-optimization.html">Home Network Optimization</a> or
+        <a href="/guides/cloud-backup-basics.html">Cloud Backup Basics</a>.
+    </p>
+
+</main>
+
+<footer>
+    <p>&copy; 2013–2026 Hardy Technology Solutions</p>
+</footer>
+
+</body>
+</html>
