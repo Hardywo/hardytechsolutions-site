@@ -17,22 +17,20 @@
             color: #333;
         }
 
-        /* HEADER + NAV */
+        /* HEADER (MATCHES HOMEPAGE EXACTLY) */
         header {
             background: #ffffff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            padding: 20px 20px 10px;
             border-bottom: 1px solid #e0e0e0;
-        }
-        header img {
-            max-height: 70px;
-            width: auto;
         }
         .header-inner {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        header img {
+            max-height: 70px;
+            width: auto;
         }
         .top-nav {
             margin-top: 12px;
@@ -50,28 +48,28 @@
         .top-nav .current-page {
             color: #000;
             cursor: default;
-            text-decoration: none;
         }
 
-        /* DARK HERO */
+        /* DARK HERO (SHORTER VERSION) */
         .hero {
             background: linear-gradient(135deg, #1a1a1a, #333);
             color: #fff;
-            padding: 70px 20px;
             text-align: center;
+            padding: 55px 20px; /* shorter than homepage */
         }
         .hero h1 {
-            font-size: 2.4rem;
+            font-size: 2.4rem; /* slightly smaller than homepage */
             margin-bottom: 10px;
         }
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             opacity: 0.9;
-            max-width: 700px;
+            max-width: 650px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
-        /* GUIDE GRID */
+        /* GUIDE GRID (MATCHES HOMEPAGE) */
         .guides {
             max-width: 1100px;
             margin: 0 auto;
@@ -81,7 +79,7 @@
             gap: 25px;
         }
 
-        /* CLICKABLE GUIDE CARD */
+        /* FULLY CLICKABLE GUIDE CARD */
         .guide-card {
             display: block;
             background: #fff;
@@ -103,11 +101,10 @@
             display: inline-block;
             margin-top: 12px;
             font-weight: bold;
-            color: #1a1a1a;
             text-decoration: underline;
         }
 
-        /* FOOTER */
+        /* FOOTER (MATCHES HOMEPAGE) */
         footer {
             background: #1a1a1a;
             color: #ccc;
@@ -143,7 +140,7 @@
     </div>
 </header>
 
-<!-- DARK HERO -->
+<!-- SHORT DARK HERO -->
 <section class="hero">
     <h1>All Tech Guides</h1>
     <p>Practical, step-by-step workflows for real people.</p>
