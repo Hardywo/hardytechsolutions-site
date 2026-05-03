@@ -17,6 +17,8 @@
       color: #222;
       line-height: 1.6;
     }
+
+    /* HEADER + NAV */
     header {
       text-align: center;
       padding: 2rem 1rem 1rem;
@@ -43,29 +45,60 @@
       font-weight: 700;
       cursor: default;
     }
+
+    /* MAIN CONTENT */
     main {
       max-width: 900px;
       margin: 0 auto;
       padding: 2rem 1.5rem 4rem;
       background: #fff;
     }
-    h1 {
+    h1, h2 {
       text-align: center;
       margin-top: 0;
     }
+
+    /* FEATURED GUIDES */
     .guide-list {
       margin-top: 2rem;
     }
-    .guide-list a {
+    .guide-card {
       display: block;
-      padding: 0.75rem 0;
-      font-size: 1.1rem;
-      color: #005bbb;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      background: #f8f9fc;
+      border-radius: 8px;
       text-decoration: none;
-      border-bottom: 1px solid #e0e0e0;
+      color: #005bbb;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-    .guide-list a:hover {
+    .guide-card:hover {
+      background: #eef3ff;
       text-decoration: underline;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    .about p {
+      max-width: 700px;
+      margin: 0.5rem auto;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #666;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -85,19 +118,39 @@
   </header>
 
   <main>
-    <h1>Welcome to Hardy Technology Solutions</h1>
-    <p>Your home for simple, visual, beginner‑friendly tech guides. Whether you're troubleshooting your home network or learning new digital skills, HTS gives you clear steps, clean visuals, and practical solutions.</p>
 
+    <!-- HERO -->
+    <h1>Hardy Technology Solutions</h1>
+    <p style="text-align:center; max-width:700px; margin:0 auto;">
+      Practical, beginner‑friendly tech guides designed to make technology easier, clearer, and less frustrating.
+      Whether you're troubleshooting your home network or improving your digital workflow, HTS gives you simple steps and clean visuals.
+    </p>
+
+    <!-- FEATURED GUIDES -->
     <section class="guide-list">
-      <h2>Available Guides</h2>
+      <h2>Featured Guides</h2>
 
-      <a href="/guides/home-network-optimization.html">
+      <a class="guide-card" href="/guides/home-network-optimization.html">
         Beginner-Friendly Home Network Optimization
       </a>
 
       <!-- Future guides will be added here -->
     </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+      <h2>About Hardy Technology Solutions</h2>
+      <p>Hardy Technology Solutions was founded in 2013 by William Hardy.</p>
+      <p>William is a Computer Engineer with MS Windows and Network Administration experience.</p>
+      <p>He has provided direct customer support and engineering services to a domain of 1,000+ users.</p>
+      <p>He is continuously committed to maintaining cutting-edge technical skills and up-to-date industry knowledge.</p>
+    </section>
+
   </main>
+
+  <footer>
+    © 2013–2026 Hardy Technology Solutions — All Rights Reserved
+  </footer>
 
 </body>
 </html>
