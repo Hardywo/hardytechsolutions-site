@@ -59,6 +59,35 @@
             max-height: 70px;
             width: auto;
         }
+        /* HEADER NAVIGATION */
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-nav {
+    margin-top: 12px;
+}
+
+.top-nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+.top-nav .current-page {
+    color: #000;
+    cursor: default;
+    text-decoration: none;
+}
+
 
         /* HERO */
         .hero {
@@ -170,9 +199,20 @@
 </head>
 <body>
 
-<!-- HEADER WITH LOGO -->
+<!-- HEADER WITH LOGO + NAVIGATION -->
 <header>
-    <img src="images/HTS_Logo.png" alt="Hardy Technology Solutions logo">
+    <div class="header-inner">
+        <a href="/index.html">
+            <img src="images/HTS_Logo.png" alt="Hardy Technology Solutions logo">
+        </a>
+
+        <nav class="top-nav">
+            <a class="current-page">Home</a>
+            <a href="/guides/index.html">Guides</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
 <!-- HERO -->
