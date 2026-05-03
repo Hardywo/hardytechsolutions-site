@@ -1,266 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardy Technology Solutions</title>
 
-    <!-- SEO Title & Description -->
-    <title>Hardy Technology Solutions | Practical Tech Guides & Troubleshooting</title>
-    <meta name="description" content="Step-by-step tech guides, troubleshooting workflows, and practical solutions for Windows PCs, home networks, backups, and digital organization.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/HTS_Icon.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/HTS_Icon.png">
-
-    <!-- Open Graph (Social Sharing) -->
-    <meta property="og:title" content="Hardy Technology Solutions">
-    <meta property="og:description" content="Practical tech guides and troubleshooting workflows for real people.">
-    <meta property="og:image" content="https://www.hardytechsolutions.com/images/HTS_Logo.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.hardytechsolutions.com">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hardy Technology Solutions">
-    <meta name="twitter:description" content="Step-by-step tech guides and troubleshooting workflows.">
-    <meta name="twitter:image" content="https://www.hardytechsolutions.com/images/HTS_Logo.png">
-
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Hardy Technology Solutions",
-      "url": "https://www.hardytechsolutions.com",
-      "description": "Practical tech guides and troubleshooting workflows for real people.",
-      "publisher": {
-        "@type": "Person",
-        "name": "Bill Hardy"
-      }
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
     }
-    </script>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            color: #333;
-        }
-
-        /* HEADER WITH LOGO */
-        header {
-            background: #ffffff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        header img {
-            max-height: 70px;
-            width: auto;
-        }
-
-        /* HERO */
-        .hero {
-            background: linear-gradient(135deg, #1a1a1a, #333);
-            color: #fff;
-            padding: 90px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        /* SECTION TITLES */
-        .section-title {
-            text-align: center;
-            margin: 60px 0 20px;
-            font-size: 1.9rem;
-            font-weight: bold;
-        }
-
-        /* FEATURED GUIDES */
-        .guides {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .guide-card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
-        }
-        .guide-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-        }
-        .guide-card h3 {
-            margin-top: 0;
-        }
-        .guide-card a {
-            display: inline-block;
-            margin-top: 12px;
-            color: #1a1a1a;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .guide-card a:hover {
-            text-decoration: underline;
-        }
-
-        /* CATEGORIES */
-        .categories {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-        }
-        .category-card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        }
-
-        /* ABOUT */
-        .about {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 50px 25px 70px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        }
-        .about p {
-            line-height: 1.6;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 35px 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        footer nav a {
-            color: #ccc;
-            margin: 0 12px;
-            text-decoration: none;
-        }
-        footer nav a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    header img.logo {
+      max-width: 260px;
+      height: auto;
+    }
+    nav {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #005bbb;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    nav .current-page {
+      color: #000;
+      font-weight: 700;
+      cursor: default;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      background: #fff;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .guide-list {
+      margin-top: 2rem;
+    }
+    .guide-list a {
+      display: block;
+      padding: 0.75rem 0;
+      font-size: 1.1rem;
+      color: #005bbb;
+      text-decoration: none;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .guide-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HEADER WITH LOGO -->
-<header>
-    <img src="images/HTS_Logo.png" alt="Hardy Technology Solutions logo">
-</header>
+  <!-- HEADER WITH LOGO + NAV -->
+  <header>
+    <a href="/index.html">
+      <img src="/images/HTS_Logo.png" alt="Hardy Technology Solutions Logo" class="logo">
+    </a>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Practical Tech Solutions for Real People</h1>
-    <p>
-        Step-by-step guides, troubleshooting workflows, and modern digital solutions —
-        built from years of hands-on IT experience and real-world problem solving.
-    </p>
-</section>
-
-<!-- FEATURED GUIDES -->
-<h2 class="section-title">Featured Guides</h2>
-<section class="guides">
-
-    <div class="guide-card">
-        <h3>Fixing Slow Windows PCs</h3>
-        <p>A clean, reliable workflow for diagnosing and speeding up any Windows machine without guesswork.</p>
-        <a href="/guides/fix-slow-windows-pc.html">Read Guide →</a>
-    </div>
-
-    <div class="guide-card">
-        <h3>Home Network Optimization</h3>
-        <p>Simple steps to improve Wi-Fi coverage, reduce buffering, and stabilize your home network.</p>
-        <a href="/guides/home-network-optimization.html">Read Guide →</a>
-    </div>
-
-    <div class="guide-card">
-        <h3>Beginner’s Guide to Cloud Backups</h3>
-        <p>Protect your family photos, documents, and devices with a no-nonsense backup strategy.</p>
-        <a href="/guides/cloud-backup-basics.html">Read Guide →</a>
-    </div>
-
-</section>
-
-<!-- CATEGORIES -->
-<h2 class="section-title">Categories</h2>
-<section class="categories">
-
-    <div class="category-card">
-        <h3>PC Troubleshooting</h3>
-        <p>Fix slow computers, crashes, and common Windows issues with clear, repeatable workflows.</p>
-    </div>
-
-    <div class="category-card">
-        <h3>Home Networking</h3>
-        <p>Improve Wi-Fi coverage, speed, and reliability across your home.</p>
-    </div>
-
-    <div class="category-card">
-        <h3>Digital Organization</h3>
-        <p>Backups, cloud storage, password management, and digital hygiene for families.</p>
-    </div>
-
-    <div class="category-card">
-        <h3>DIY Tech Fixes</h3>
-        <p>Simple, practical fixes for everyday tech problems around the home.</p>
-    </div>
-
-</section>
-
-<!-- ABOUT -->
-<h2 class="section-title">About Hardy Technology Solutions</h2>
-<section class="about">
-    <p>
-        Hardy Technology Solutions is built on a simple idea:  
-        <strong>technology should make life easier, not more frustrating</strong>.
-    </p>
-    <p>
-        I’m Bill Hardy — an IT professional, hands-on troubleshooter, and workflow designer.  
-        I create practical guides that help real people solve real problems without jargon, fluff, or guesswork.
-    </p>
-    <p>
-        Whether you're fixing a slow PC, improving your home network, or organizing your digital life,  
-        my goal is to give you <strong>clear, reliable, step-by-step solutions</strong> you can trust.
-    </p>
-</section>
-
-<!-- FOOTER -->
-<footer>
     <nav>
-        <a href="/">Home</a>
-        <a href="/guides">Guides</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+      <a class="current-page">Home</a>
+      <a href="/guides/index.html">Guides Index</a>
     </nav>
-    <p>&copy; 2013–2026 Hardy Technology Solutions</p>
-</footer>
+  </header>
+
+  <main>
+    <h1>Welcome to Hardy Technology Solutions</h1>
+    <p>Your home for simple, visual, beginner‑friendly tech guides. Whether you're troubleshooting your home network or learning new digital skills, HTS gives you clear steps, clean visuals, and practical solutions.</p>
+
+    <section class="guide-list">
+      <h2>Available Guides</h2>
+
+      <a href="/guides/home-network-optimization.html">
+        Beginner-Friendly Home Network Optimization
+      </a>
+
+      <!-- Future guides will be added here -->
+    </section>
+  </main>
 
 </body>
 </html>
