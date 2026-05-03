@@ -4,40 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Title & Description -->
     <title>Hardy Technology Solutions | Practical Tech Guides & Troubleshooting</title>
     <meta name="description" content="Step-by-step tech guides, troubleshooting workflows, and practical solutions for Windows PCs, home networks, backups, and digital organization.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/HTS_Icon.png">
-
-    <!-- Open Graph (Social Sharing) -->
-    <meta property="og:title" content="Hardy Technology Solutions">
-    <meta property="og:description" content="Practical tech guides and troubleshooting workflows for real people.">
-    <meta property="og:image" content="https://www.hardytechsolutions.com/images/HTS_Logo.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.hardytechsolutions.com">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hardy Technology Solutions">
-    <meta name="twitter:description" content="Step-by-step tech guides and troubleshooting workflows.">
-    <meta name="twitter:image" content="https://www.hardytechsolutions.com/images/HTS_Logo.png">
-
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Hardy Technology Solutions",
-      "url": "https://www.hardytechsolutions.com",
-      "description": "Practical tech guides and troubleshooting workflows for real people.",
-      "publisher": {
-        "@type": "Person",
-        "name": "Bill Hardy"
-      }
-    }
-    </script>
 
     <style>
         body {
@@ -47,47 +17,40 @@
             color: #333;
         }
 
-        /* HEADER WITH LOGO */
+        /* HEADER */
         header {
             background: #ffffff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            padding: 20px 20px 10px;
             border-bottom: 1px solid #e0e0e0;
+        }
+        .header-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header img {
             max-height: 70px;
             width: auto;
         }
-        /* HEADER NAVIGATION */
-.header-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.top-nav {
-    margin-top: 12px;
-}
-
-.top-nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: bold;
-    font-size: 0.95rem;
-}
-
-.top-nav a:hover {
-    text-decoration: underline;
-}
-
-.top-nav .current-page {
-    color: #000;
-    cursor: default;
-    text-decoration: none;
-}
-
+        /* NAVIGATION */
+        .top-nav {
+            margin-top: 12px;
+        }
+        .top-nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        .top-nav .current-page {
+            color: #000;
+            cursor: default;
+        }
 
         /* HERO */
         .hero {
@@ -125,11 +88,16 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
+
+        /* FULLY CLICKABLE GUIDE CARD */
         .guide-card {
+            display: block;
             background: #fff;
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: #1a1a1a;
             transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
         .guide-card:hover {
@@ -139,14 +107,10 @@
         .guide-card h3 {
             margin-top: 0;
         }
-        .guide-card a {
+        .guide-card .read-link {
             display: inline-block;
             margin-top: 12px;
-            color: #1a1a1a;
             font-weight: bold;
-            text-decoration: none;
-        }
-        .guide-card a:hover {
             text-decoration: underline;
         }
 
@@ -164,6 +128,11 @@
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 16px rgba(0,0,0,0.10);
         }
 
         /* ABOUT */
@@ -199,7 +168,7 @@
 </head>
 <body>
 
-<!-- HEADER WITH LOGO + NAVIGATION -->
+<!-- HEADER -->
 <header>
     <div class="header-inner">
         <a href="/index.html">
@@ -228,23 +197,23 @@
 <h2 class="section-title">Featured Guides</h2>
 <section class="guides">
 
-    <div class="guide-card">
+    <a href="/guides/fix-slow-windows-pc.html" class="guide-card">
         <h3>Fixing Slow Windows PCs</h3>
         <p>A clean, reliable workflow for diagnosing and speeding up any Windows machine without guesswork.</p>
-        <a href="/guides/fix-slow-windows-pc.html">Read Guide →</a>
-    </div>
+        <span class="read-link">Read Guide →</span>
+    </a>
 
-    <div class="guide-card">
+    <a href="/guides/home-network-optimization.html" class="guide-card">
         <h3>Home Network Optimization</h3>
         <p>Simple steps to improve Wi-Fi coverage, reduce buffering, and stabilize your home network.</p>
-        <a href="/guides/home-network-optimization.html">Read Guide →</a>
-    </div>
+        <span class="read-link">Read Guide →</span>
+    </a>
 
-    <div class="guide-card">
+    <a href="/guides/cloud-backup-basics.html" class="guide-card">
         <h3>Beginner’s Guide to Cloud Backups</h3>
         <p>Protect your family photos, documents, and devices with a no-nonsense backup strategy.</p>
-        <a href="/guides/cloud-backup-basics.html">Read Guide →</a>
-    </div>
+        <span class="read-link">Read Guide →</span>
+    </a>
 
 </section>
 
