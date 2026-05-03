@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All Tech Guides | Hardy Technology Solutions</title>
+    <meta name="description" content="Browse all Hardy Technology Solutions guides, including Windows troubleshooting, home networking, and cloud backup workflows.">
+
+    <link rel="icon" type="image/png" href="/images/HTS_Icon.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        /* HEADER + NAV */
+        header {
+            background: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header img {
+            max-height: 70px;
+            width: auto;
+        }
+        .header-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top-nav {
+            margin-top: 12px;
+        }
+        .top-nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        .top-nav .current-page {
+            color: #000;
+            cursor: default;
+            text-decoration: none;
+        }
+
+        /* DARK HERO */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #fff;
+            padding: 70px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* GUIDE GRID */
+        .guides {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* CLICKABLE GUIDE CARD */
+        .guide-card {
+            display: block;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: #1a1a1a;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        .guide-card h3 {
+            margin-top: 0;
+        }
+        .guide-card .read-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 35px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        footer nav a {
+            color: #ccc;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+        footer nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-inner">
+        <a href="/index.html">
+            <img src="/images/HTS_Logo.png" alt="Hardy Technology Solutions logo">
+        </a>
+
+        <nav class="top-nav">
+            <a href="/index.html">Home</a>
+            <a class="current-page">Guides Index</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- DARK HERO -->
+<section class="hero">
+    <h1>All Tech Guides</h1>
+    <p>Practical, step-by-step workflows for real people.</p>
+</section>
+
+<!-- GUIDE GRID -->
+<section class="guides">
+
+    <a href="/guides/fix-slow-windows-pc.html" class="guide-card">
+        <h3>Fixing Slow Windows PCs</h3>
+        <p>A clean, reliable workflow for diagnosing and speeding up any Windows machine without guesswork.</p>
+        <span class="read-link">Read Guide →</span>
+    </a>
+
+    <a href="/guides/home-network-optimization.html" class="guide-card">
+        <h3>Home Network Optimization</h3>
+        <p>Simple steps to improve Wi-Fi coverage, reduce buffering, and stabilize your home network.</p>
+        <span class="read-link">Read Guide →</span>
+    </a>
+
+    <a href="/guides/cloud-backup-basics.html" class="guide-card">
+        <h3>Beginner’s Guide to Cloud Backups</h3>
+        <p>Protect your family photos, documents, and devices with a no-nonsense backup strategy.</p>
+        <span class="read-link">Read Guide →</span>
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/guides">Guides</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <p>&copy; 2013–2026 Hardy Technology Solutions</p>
+</footer>
+
+</body>
+</html>
